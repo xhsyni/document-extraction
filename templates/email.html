@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Extractor</title>
+    <link rel="stylesheet" type="text/css" href="../static/email.css">
+    <script src="../static/email.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <form action="/"><button id="back_button">Back</button></form>
+            <div class="text-header">
+                <div class="header-card">
+                    <h1>Email Extractor</h1>
+                    <img src="../static/resources/main_email.png" width="75px">
+                </div>
+                <p>This is a basic API for extracting email content and downloading it as a CSV.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <form action="/extract-email" method="POST" id="email-form">
+                <div class="form-container">
+                    <div class="domain-container">
+                        <label>Select your domain:</label>
+                        <div class="domain-selection">
+                            <div id="gmail-domain">
+                                <input type="radio" name="domain" value="gmail" id="gmail" checked>
+                                <label for="gmail"><img src="../static/resources/main_email.png"
+                                        width="25px">Gmail</label>
+                            </div>
+                            <div id="outlook-domain">
+                                <input type="radio" name="domain" value="outlook" id="outlook">
+                                <label for="outlook"><img src="../static/resources/outlook.png"
+                                        width="25px">Outlook</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <div>
+                            <label for="email">Email Address:</label><br>
+                            <div class="input-icon">
+                                <img src="../static/resources/email.png" width="18px">
+                                <input type="email" name="email_address" placeholder="Your email address" id="email"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- uiwv wldc ppbq urwb -->
+                        <div class="key-container">
+                            <label for="pass">Pass Key:</label><br>
+                            <div class="input-icon">
+                                <img src="../static/resources/lock.png" width="18px">
+                                <input type="password" name="passkey" placeholder="Passkey" id="pass" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selection-container">
+                        <div>
+                            <label>Select the folder:</label>
+                            <div class="input-icon">
+                                <img src="../static/resources/folder.png" width="18px">
+                                <select name="selection">
+                                    <option value="inbox">Inbox</option>
+                                    <option value="sent">Sent</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-container">
+                            <label>Filter By:</label>
+                            <div class="input-icon">
+                                <img src="../static/resources/filter.png" width="18px">
+                                <select name="key" id="filterBy">
+                                    <option value="from">From</option>
+                                    <option value="to">To</option>
+                                    <option value="all">All</option>
+                                    <option value="subject">Subject</option>
+                                    <option value="cc">CC</option>
+                                    <option value="bcc">BCC</option>
+                                    <option value="date">Date</option>
+                                    <option value="attachment">Attachment</option>
+                                    <option value="body">Body/Content</option>
+                                    <option value="message_id">Message-ID</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="optional-container">
+                        <div class="value-container">
+                            <label for="value">Enter the value to filter:</label>
+                            <div class="input-icon">
+                                <img src="../static/resources/tag.png" width="18px">
+                                <input type="text" name="value" placeholder="Value" id="value" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remove-container">
+                        <input type="checkbox" id="remove-stop" name="remove-stop" checked>
+                        <label for="remove-stop">Remove stopwords</label>
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <p style="margin-bottom: 0px;font-size: small;">*Please get your passkey from your domain account.
+                    </p>
+                    <button type="submit" id="runFileButton">Run File</button>
+                </div>
+            </form>
+            <div id="loading" style="display: none;">
+                <div class="spinner"><img src="../static/resources/loading.png" width="30px">
+                    <p>Processing your request, please wait.........</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

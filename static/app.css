@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    color: #333;
+    flex-direction: column;
+    width: 600px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 2px 4px 10px #545454;
+    width: 100%;
+    max-width: 538px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 38px;
+}
+
+.header-container {
+    padding: 4px;
+    margin: 0px 15px;
+    border-bottom: 3px solid #292929;
+    margin-top: 4px;
+}
+
+.header-container h1,
+.header-container p {
+    text-align: left;
+    margin: 15px 0px;
+}
+
+.header-container p {
+    margin-bottom: 20px;
+}
+
+.header-container h2 {
+    margin-bottom: 8px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 38px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: 238px;
+    height: 200px;
+    box-shadow: 2px 2px 4px #333;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s
+}
+
+.card img {
+    padding: 15px;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 8px 12px #333;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 4px #333;
+}
+
+.card span {
+    text-decoration: none;
+    display: block;
+    color: #1b1b1b;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 22px;
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#pdf {
+    background-color: #fed1d1;
+}
+
+#ppt {
+    background-color: #ffe5d0;
+}
+
+#word {
+    background-color: #d9deff;
+}

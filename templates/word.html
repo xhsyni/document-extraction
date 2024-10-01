@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Extractor</title>
+    <link rel="stylesheet" href="../static/word.css">
+    <script src="../static/word.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <form action="/"><button id="back_button">Back</button></form>
+            <div class="text-header">
+                <div class="header-card">
+                    <h1>Word Extractor</h1>
+                    <img src="../static/resources/main_word.png" width="75px">
+                </div>
+                <p>This is a basic API for extracting Word content and downloading it as a CSV.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="file-selection">
+                <div class="file-upload" id="file-upload">Upload File</div>
+                <div class="folder-upload" id="folder-upload">Upload Folder</div>
+            </div>
+            <div class="mainform-filecontainer">
+                <form method="POST" action="/extract-word" enctype="multipart/form-data">
+                    <div class="form-containerFile">
+                        <div class="upload-file">
+                            <div class="file-input">
+                                <label class="file-label" for="wordFile">
+                                    <img src="../static/resources/word.png" width="45px">
+                                    <p>Upload WORD File</p>
+                                </label>
+                                <input type="file" id="wordFile" name="wordFile" accept=".docx">
+                                <span id="file-path">No File chosen</span>
+                            </div>
+                        </div>
+
+                        <div class="options">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="headerexists-file" name="headerexists-file" checked>
+                                <label for="headerexists-file">Header exists</label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="footerexists-file" name="footerexists-file" checked>
+                                <label for="footerexists-file">Footer exists</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <p style="margin-bottom: 0px;font-size: small;">*If the Word Extractor didn't meet your
+                            expectation, transform your DOCX into PDF and try the PDF Extractor.</p>
+                        <button type="submit" class="submit-button" id="submit-Filebutton">Extract File</button>
+                    </div>
+                </form>
+                <div id="loading-File" style="display: none;">
+                    <div class="spinner"><img src="../static/resources/loading.png" width="30px">
+                        <p>Processing your WORD file, please wait.........</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainform-foldercontainer">
+                <form method="POST" action="/extract-word" enctype="multipart/form-data">
+                    <div class="form-containerFolder">
+                        <div class="upload-file">
+                            <div class="file-input">
+                                <label class="file-label" for="wordFolder">
+                                    <img src="../static/resources/word.png" width="45px">
+                                    <p>Upload WORD Folder</p>
+                                </label>
+                                <input type="file" id="wordFolder" name="wordFolder" accept=".docx"
+                                    webkitdirectory='true' multiple>
+                                <span id="file-list">No Folder chosen</span>
+                            </div>
+                        </div>
+
+                        <div class="options">
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="headerexists-folder" name="headerexists-folder" checked>
+                                <label for="headerexists-folder">Header exists (apply to all)</label>
+                            </div>
+
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="footerexists-folder" name="footerexists-folder" checked>
+                                <label for="footerexists-folder">Footer exists (apply to all)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-container">
+                        <p style="margin-bottom: 0px;font-size: small;">*If the Word Extractor didn't meet your
+                            expectation, transform your DOCX into PDF and try the PDF Extractor.</p>
+                        <button type="submit" class="submit-button" id="submit-Folderbutton">Extract File</button>
+                    </div>
+                </form>
+                <div id="loading-Folder" style="display: none;">
+                    <div class="spinner"><img src="../static/resources/loading.png" width="30px">
+                        <p>Processing your WORD file, please wait.........</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

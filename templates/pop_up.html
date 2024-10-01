@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Extractor</title>
+    <link rel="stylesheet" href="../static/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-container">
+            <h1>Welcome to Document Extractor</h1>
+            <p>We can help you to extract documents like email, pdf, powerpoint, and word file into csv files.</p>
+            <h2>Select a document type to process:</h2>
+        </div>
+        <div class="card-container">
+            <a href="/email" class="card" id="email">
+                <img src="../static/resources/main_email.png" width="100px" height="100px">
+                <span>Email</span>
+            </a>
+            <a href="/pdf" class="card" id="pdf">
+                <img src="../static/resources/main_pdf.png" width="100px" height="100px">
+                <span>PDF</span>
+            </a>
+            <a href="/ppt" class="card" id="ppt">
+                <img src="../static/resources/main_ppt.png" width="100px" height="100px">
+                <span>PowerPoint</span>
+            </a>
+            <a href="/word" class="card" id="word">
+                <img src="../static/resources/main_word.png" width="100px" height="100px">
+                <span>Word</span>
+            </a>
+        </div>
+    </div>
+    <script src="../pop_up.js"></script>
+</body>
+
+</html>
