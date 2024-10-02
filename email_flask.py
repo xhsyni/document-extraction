@@ -634,7 +634,7 @@ import os
 
 email_extractor_bp = Blueprint('email-extractor',__name__)
 
-CSV_FOLDER = '/csv_files'
+CSV_FOLDER = '/tmp/csv_files'
 os.makedirs(CSV_FOLDER, exist_ok=True)
 
 @email_extractor_bp.route('/email')
