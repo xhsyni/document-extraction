@@ -462,8 +462,8 @@ import pandas as pd
 
 pdf_extractor_bp = Blueprint('pdf_extractor_bp',__name__)
 
-UPLOAD_FOLDER = '/uploads'
-CSV_FOLDER = '/csv_files'
+UPLOAD_FOLDER = '/tmp/uploads'
+CSV_FOLDER = '/tmp/csv_files'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(CSV_FOLDER, exist_ok=True)
 
