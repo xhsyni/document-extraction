@@ -260,9 +260,9 @@ import fitz
 
 pptx_extractor_bp = Blueprint('pptx_extractor_bp',__name__)
 
-UPLOAD_FOLDER = '/uploads'
-TEMP_FOLDER = '/temps'
-CSV_FOLDER = '/csv_files'
+UPLOAD_FOLDER = '/tmp/uploads'
+TEMP_FOLDER = '/tmp/temps'
+CSV_FOLDER = '/tmp/csv_files'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(TEMP_FOLDER, exist_ok=True)
 os.makedirs(CSV_FOLDER, exist_ok=True)
