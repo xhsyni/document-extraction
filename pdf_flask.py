@@ -9,6 +9,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import nltk
 nltk.data.path.append('./nltk_data')
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 def fonts(doc):
     data = []
