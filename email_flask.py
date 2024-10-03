@@ -11,9 +11,6 @@ from nltk.stem import WordNetLemmatizer
 import nltk
 import os
 nltk.data.path.append('./nltk_data')
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
 
 def html_to_text(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
